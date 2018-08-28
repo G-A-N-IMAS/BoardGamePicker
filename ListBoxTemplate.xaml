@@ -1,0 +1,258 @@
+﻿<Page x:Class="BoardGamePicker.ListBoxTemplate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BoardGamePicker"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListBoxTemplate">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListBox HorizontalContentAlignment="Stretch">
+
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="150"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBox x:Name="Title" TextWrapping="Wrap" BorderThickness="0" Text="Title" Grid.Row="0" IsReadOnly="True" FontSize="24" Background="#FFEFEFEF"/>
+                            <TextBox x:Name="expansionNeededDisclaimer" BorderThickness="0" IsReadOnly="True" Grid.Row="1" Foreground="#FFDA6161" Background="#FFEFEFEF"/>
+                            <Grid Grid.Row="2" Background="#FFD8DEE3" HorizontalAlignment="Stretch" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="40"/>
+
+                        </Grid.ColumnDefinitions>
+                                <TextBlock Text="Extensions :" FontWeight="Bold" Grid.Column="0"/>
+                                <TextBox x:Name="expansionList" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" Grid.Column="1" Background="#FFD8DEE3"/>
+                                <Button x:Name="addExpansion" Grid.Column="2" Margin="5,0,0,0" Content="&#xE948;" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Foreground="#FF5AA3C8" FontSize="16" Background="#FF7CC9DA" Height="20" Width="20"/>
+                       
+                    </Grid>
+
+                </Grid>
+                        <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="#FFEFEFEF" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="80"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="PlayerMin" Text="min :"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="PlayerMax" Text="max :"  Grid.Row="1" Grid.Column="1"/>
+                            <TextBox x:Name="nbPlayerMin" BorderThickness="0" Text="temp 2" IsReadOnly="True" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Background="#FFEFEFEF"/>
+                            <TextBox x:Name="nbPlayerMax" BorderThickness="0" Text="temp5" IsReadOnly="True" Grid.Column="2" Grid.Row="1" Background="#FFEFEFEF"/>
+                            <TextBlock Text="&#xE716;" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" FontSize="36"/>
+
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBox x:Name="Styles" BorderThickness="0" IsReadOnly="True" Grid.Row="1" Text=" Styles ; Styles; Styles; styles" Grid.Column="0" Background="#FFD8DEE3"/>
+                            <Grid Grid.Row="0" Background="#FFF3F3F0" HorizontalAlignment="Stretch">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="15"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="" FontFamily="Segoe MDL2 Assets" FontSize="18" Grid.Column="0" />
+                                <TextBlock x:Name="duration" Grid.Row="1" Grid.Column="1">
+                                    <TextBlock.Inlines >
+                                        <Run />
+                                        <Run Text="entre"/>
+                                    </TextBlock.Inlines>
+                                </TextBlock>
+                                <TextBox x:Name="durationMin" BorderThickness="0" IsReadOnly="True" Grid.Column="2" Text="test" Background="#FFF3F3F0"/>
+                                <TextBlock x:Name="et" Text="et" Grid.Column="3"/>
+                                <TextBox x:Name="durationMax" BorderThickness="0" IsReadOnly="True" Grid.Column="4" Text="test" Background="#FFF3F3F0"/>
+                                <TextBlock Text="minutes" Grid.Column="5"/>
+                            </Grid>
+                            <Grid Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Stretch">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Editeur :" Grid.Column="1" Grid.Row="0" FontWeight="Bold" Background="#FFEFEFEF"/>
+                                <TextBox BorderThickness="0" x:Name="editorsList" IsReadOnly="True" Grid.Row="1" Text="éditeur; éditeur; éditeur" Background="#FFEFEFEF"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="2" Grid.RowSpan="2" Background="#FFCFCFCF">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ModifyButton" Grid.Column="0" Content="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="22" Margin="25,25,5,25"/>
+                            <Button x:Name="DeleteButton" Grid.Column="1" Content="&#xEF2C;" FontFamily="Segoe MDL2 Assets" FontSize="24" Foreground="#FFE85252" Margin="10,25,20,25"/>
+                        </Grid>
+                    </Grid>
+
+        </ListBox>
+
+        <ListBox Grid.Row="1" HorizontalContentAlignment="Stretch">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="titleDisplay" Text="{Binding title}" Grid.Row="0" FontSize="16" IsReadOnly="True" BorderThickness="0" Background="#FFE4E4E4"/>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="icon" Grid.Column="0" Text="&#xEBDA;" FontFamily="Segoe MDL2 Assets" HorizontalAlignment="Right" Margin="0,5,10,0" VerticalAlignment="Top"/>
+                        <TextBlock Text="min:" Grid.Column="1" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                        <TextBox x:Name="minPlayer" IsReadOnly="True" Text="{Binding minPlayers}" BorderThickness="0" Grid.Column="2" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                        <TextBlock Text="max :" Grid.Column="3" VerticalAlignment="Top" Margin="0,5,0,0" />
+                        <TextBox x:Name="maxPlayer" Text="{Binding maxPlayers}" IsReadOnly="True" BorderThickness="0" Grid.Column="4" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                    </Grid>
+                </Grid>
+                <Button x:Name="modifyExpansion" Grid.Column="1" Height="20" Width="20" Content="&#xE713;" FontFamily="Segoe MDL2 Assets"/>
+            </Grid>
+        </ListBox>
+
+        <ListBox Grid.Row="2" HorizontalContentAlignment="Stretch">
+            <Grid HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="Title2" TextWrapping="Wrap" BorderThickness="0" Text="{Binding title}" Grid.Row="0" IsReadOnly="True" FontSize="14" Background="#FFEFEFEF"/>
+                    <TextBox x:Name="expansionNeededDisclaimer2" Text="{Binding expansionDisclaimer}" BorderThickness="0" IsReadOnly="True" Grid.Row="1" Foreground="#FFDA6161" Background="#FFEFEFEF" FontSize="8"/>
+                    <Grid Grid.Row="2" Background="#FFD8DEE3" HorizontalAlignment="Stretch" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="40"/>
+
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Extensions :" FontWeight="Bold"  Grid.Column="0" FontSize="8"/>
+                        <TextBox x:Name="expansionList2" Text="{Binding expansionListTitles}" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap" Grid.Column="1" Background="#FFD8DEE3" FontSize="8"/>
+                        <Button x:Name="addExpansion2"  Grid.Column="2" Margin="5,0,0,0" Content="&#xE948;" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Foreground="#FF5AA3C8" Background="#FF7CC9DA" MaxHeight="20" Width="15" Height="15" FontSize="11"/>
+
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="#FFEFEFEF">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="PlayerMin2" Text="min :"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" FontSize="8"/>
+                    <TextBlock x:Name="PlayerMax2" Text="max :"  Grid.Row="1" Grid.Column="1" FontSize="8"/>
+                    <TextBox x:Name="nbPlayerMin2" BorderThickness="0" Text="{Binding minPlayers}" IsReadOnly="True" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Background="#FFEFEFEF" FontSize="8"/>
+                    <TextBox x:Name="nbPlayerMax2" BorderThickness="0" Text="{Binding maxPlayers}" IsReadOnly="True" Grid.Column="2" Grid.Row="1" Background="#FFEFEFEF" FontSize="8"/>
+                    <TextBlock Text="&#xE716;" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" FontSize="22"/>
+                    <Grid Grid.Column="3" Grid.RowSpan="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="" FontFamily="Segoe MDL2 Assets" FontSize="14" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" />
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock  Text="min :" Grid.Row="0" FontSize="8" VerticalAlignment="Center"/>
+                            <TextBlock  Text="max :" Grid.Row="1"  FontSize="8"/>
+                        </Grid>
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBox x:Name="durationMin2" Grid.Row="0" BorderThickness="0" IsReadOnly="True"  Text="{Binding durationMin}" Background="#FFF3F3F0" FontSize="8" VerticalAlignment="Center"/>
+                            <TextBox x:Name="durationMax2" Grid.Row="1" BorderThickness="0" IsReadOnly="True"  Text="{Binding durationMax}" Background="#FFF3F3F0" FontSize="8"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="Styles2" BorderThickness="0" IsReadOnly="True" Grid.Row="0" Text="{Binding styleListToString}" Grid.Column="0" Background="#FFEFEFEF" Foreground="Black" FontSize="8"/>
+
+                    <Grid Grid.Column="1" Grid.RowSpan="2" Background="#FFF2F3F3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Editeur :" Grid.Column="0" Grid.Row="0" FontWeight="Bold" Background="#FFF6F9F9" FontSize="8"/>
+                        <TextBox BorderThickness="0" Grid.Column="1" x:Name="editorsList2" IsReadOnly="True"  Text="{Binding editorListToString}" Background="#FFF6F9F9" Foreground="Black" FontSize="8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="2" Grid.RowSpan="2" Background="#FFCFCFCF">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ModifyButton2"  Grid.Column="0" Content="&#xE713;" FontFamily="Segoe MDL2 Assets" FontSize="22" Margin="25,25,5,25" Width="30" Height="30"/>
+                    <Button x:Name="DeleteButton2" Grid.Column="1" Content="&#xEF2C;" FontFamily="Segoe MDL2 Assets" FontSize="24" Foreground="#FFE85252" Margin="10,25,20,25" Width="30" Height="30"/>
+                </Grid>
+            </Grid>
+        </ListBox>
+
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="importBGG.BggLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoardGamePicker"
+        mc:Ignorable="d"
+        Title="BggLogin" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource FondFinal}"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Entrez votre nom d'utilisateur sur BoardGameGeek :" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" FontFamily="Calibri" FontSize="18"/>
+        <TextBox Grid.Row="1"  x:Name="usernameInput" Margin="40,0" TextAlignment="Center" FontFamily="Calibri" FontSize="20">
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource EllipseSecondary}"/>
+            </TextBox.Background>
+        </TextBox>
+
+        <!--<TextBlock Text="Password :"/>
+            <TextBox x:Name="passwordInput"/>-->
+        <Button Grid.Row="2" IsDefault="True" x:Name="logginOkButton" Height="30" Content="OK" Click="logginOkButton_Click" Width="80">
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource BoutonMarge}"/>
+            </Button.Background>
+        </Button>
+        <TextBox IsReadOnly="True"   Grid.Row="3" TextWrapping="Wrap" x:Name="messageTb" Margin="30,0,30,20" TextAlignment="Center" FontFamily="Calibri" FontSize="16" >
+            <TextBox.Background>
+                <SolidColorBrush Color="{DynamicResource EllipseSecondary}"/>
+            </TextBox.Background>
+        </TextBox>
+
+
+    </Grid>
+</Window>

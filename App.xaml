@@ -1,0 +1,20 @@
+﻿<Application x:Class="BoardGamePicker.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BoardGamePicker"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Color x:Key="Fond">#FFDDF0C3</Color>
+        <Color x:Key="Boutons">#FFC6D0B7</Color>
+        <Color x:Key="FondFinal">#FFBBD6D5</Color>
+        <Color x:Key="BoutonFinal">#FFBBD6D5</Color>
+        <Color x:Key="Marge">#FF61A89C</Color>
+        <Color x:Key="BoutonMarge">#FF9BB9B4</Color>
+        <Color x:Key="ElipseMain">#FFD9EFF3</Color>
+        <Color x:Key="EllipseSecondary">#FFE1F0F3</Color>
+        <Color x:Key="FontColor">#FF1B5A7E</Color>
+        <Color x:Key="Texterouge">#FFBC4D45</Color>
+
+    </Application.Resources>
+</Application>

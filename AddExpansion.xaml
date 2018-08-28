@@ -1,0 +1,90 @@
+﻿<Window x:Class="BoardGamePicker.AddExpansion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoardGamePicker"
+        mc:Ignorable="d"
+        Title="AddExpansion" Height="350" Width="600">
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource EllipseSecondary}"/>
+    </Window.Background>
+    <Grid Margin="15,10,15,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Click="Back_Click" x:Name="Back" Grid.Row="0" Height="18" Width="20" HorizontalAlignment="Left" Margin="15,0,0,0" Content="&#xE248;" FontFamily="Segoe MDL2 Assets" Foreground="White">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource BoutonMarge}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource BoutonFinal}"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.Row="1" Text="Vous allez rentrer une extension pour :" TextAlignment="Center"/>
+        <TextBox Grid.Row="2" x:Name="GameTitleDisplay" IsReadOnly="True" BorderThickness="0" TextAlignment="Center" Background="{x:Null}"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Quel est le titre de cette extension?" TextAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Center"/>
+            <TextBox GotFocus="titleInput_GotFocus" x:Name="titleInput" Grid.Column="1" BorderThickness="0" TextAlignment="Center" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="145"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="293*" />
+                <ColumnDefinition Width="77*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Le jeu de base se joue de :"/>
+            <TextBox x:Name="minPlayerOriginalGame" Grid.Column="1" IsReadOnly="True" BorderThickness="0" Background="{x:Null}"/>
+            <TextBlock Grid.Column="2" Text="à"/>
+            <TextBox x:Name="maxPlayerOriginalGame" Grid.Column="3" IsReadOnly="True" BorderThickness="0" Background="{x:Null}"/>
+            <TextBlock Grid.Column="4" Text="joueurs, l'extension modifie-t-elle le nombre de joueurs?" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="Yes" Checked="Yes_Checked" Grid.Column="0" Content="Oui" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <CheckBox x:Name="No" Checked="No_Checked" Grid.Column="1" Content="Non" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="newPlayerCount" Grid.Row="6" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="&#xE716;" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" FontSize="20" Margin="0,3,0,0"/>
+            <TextBlock Grid.Column="1" Grid.Row="0" Text="&#xEBDA;" FontFamily="Segoe MDL2 Assets" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,3,0,0"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Minimum" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="Maximum" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox x:Name="minInput" GotFocus="minInput_GotFocus" Grid.Column="0" Grid.Row="2" TextAlignment="Center" Width="30"/>
+            <TextBox x:Name="maxInput" GotFocus="maxInput_GotFocus" Grid.Column="1" Grid.Row="2" TextAlignment="Center" Width="30"/>
+        </Grid>
+        <Button Click="OkExpansion_Click" x:Name="OkExpansion" Grid.Row="7" Content="OK" IsCancel="True" Height="40" Width="90" Foreground="White">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource BoutonMarge}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource BoutonFinal}"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
