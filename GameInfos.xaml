@@ -306,7 +306,7 @@
 
                     </ComboBox>
 
-                    <Button x:Name="addStyle" Click="addStyle_Click" Grid.Column="2" Margin="5,0,0,0" Content="&#xE948;" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Foreground="White" FontSize="11" MaxHeight="20" Width="15" Height="15" BorderBrush="{x:Null}" ToolTip="Ajouter l'Editeur">
+                    <Button x:Name="addStyle" Click="addStyle_Click" Grid.Column="2" Margin="5,0,0,0" Content="&#xE948;" FontFamily="Segoe MDL2 Assets" FontWeight="Bold" Foreground="White" FontSize="11" MaxHeight="20" Width="15" Height="15" BorderBrush="{x:Null}" ToolTip="Ajouter le genre">
                         <Button.Background>
                             <SolidColorBrush Color="{DynamicResource BoutonMarge}"/>
                         </Button.Background>
